@@ -44,6 +44,11 @@ int main(int narg, char* varg[])
 	bool isClient = false;
 	if(in == "client") isClient = true;
 
+    if(in == "deathstar") {
+        cout << "GitHub rules!!" << endl;
+        return 1;
+    }
+
 	if(narg > 1)
 		print_hello(*(varg+1));
 
