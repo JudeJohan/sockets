@@ -1,5 +1,4 @@
 #include <iostream>
-#include "testlib.h"
 
 //inet stuffs
 
@@ -15,16 +14,15 @@
 
 #include <chrono>
 
-/*#include <openssl/applink.c>
-#include <openssl/bio.h>
-#include <openssl/ssl.h>
-#include <openssl/err.h>*/
-
 #define SRV_IP "127.0.0.1"
 
 using namespace std;
 
 int main(int narg, char* varg[]) {
+    (void)narg;
+    (void)varg[0];
+
+
 
     return 0;
 }

@@ -7,10 +7,10 @@ CFLAGS=$(STD) $(SWITCHES)
 SRC_TEST=test.cc testlib.cc
 EXE_TEST=debug.out
 
-SRC_DEV=debmir.cc
+SRC_DEV=debmir.cc jjsockets.cc
 EXE_DEV=server.out
 
-SRC_CLI=debcli.cc
+SRC_CLI=debcli.cc jjsockets.cc
 EXE_CLI=client.out
 
 

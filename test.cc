@@ -56,6 +56,12 @@ int main(int narg, char* varg[])
 
   cout << isClient << endl;
 
+
+
+
+
+
+
   int sockfd, portno;
   //int newsockfd;
   socklen_t clilen;
