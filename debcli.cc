@@ -7,9 +7,16 @@
 #include <unistd.h>
 #include <string.h>
 #include <sys/types.h>
+
+#ifdef __WIN32__
+#include <winsock2.h>
+#include <ws2tcpip.h>
+#else
 #include <sys/socket.h>
 #include <netinet/in.h>
 #include <arpa/inet.h>
+#endif
+
 //#include <netdb.h> //cln
 
 #include <chrono>

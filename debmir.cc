@@ -8,9 +8,17 @@
 #include <unistd.h>
 #include <string.h>
 #include <sys/types.h>
+
+#ifdef __WIN32__
+#include <winsock2.h>
+#include <ws2tcpip.h>
+#else
 #include <sys/socket.h>
 #include <netinet/in.h>
 #include <arpa/inet.h>
+#endif
+
+
 //#include <netdb.h> //cln
 
 #include <chrono>
@@ -27,6 +35,11 @@ void error(const string msg, const int code)
 
 int main(int narg, char* varg[])
 {
+#ifdef __WIN32__
+    WORD versionWanted = MAKEWORD(1, 1);
+    WSADATA wsaData;
+    WSAStartup(versionWanted, &wsaData);
+#endif
     (void)narg;
     (void)varg[0];
 
@@ -44,7 +57,7 @@ int main(int narg, char* varg[])
     if(sockfd < 0) error("Socket creation failed", -1);
     cout << "Socket handle = " << sockfd << endl;
 
-    bzero((char*) &serv_addr, sizeof(serv_addr));
+    memset((char*) &serv_addr, 0, sizeof(serv_addr));
     serv_addr.sin_family = AF_INET;
 
     return 0;
