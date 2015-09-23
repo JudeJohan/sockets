@@ -15,10 +15,10 @@
 
 #include <chrono>
 
-#include <openssl/applink.c>
+/*#include <openssl/applink.c>
 #include <openssl/bio.h>
 #include <openssl/ssl.h>
-#include <openssl/err.h>
+#include <openssl/err.h>*/
 
 #define SRV_IP "127.0.0.1"
 

@@ -20,15 +20,15 @@ all:
 
 .PHONY: test
 test:
-	$(CC) $(CFLAGS) $(SRC_TEST) -o $(EXE_TEST)
+	@$(CC) $(CFLAGS) $(SRC_TEST) -o $(EXE_TEST)
 
 # g++ -std=c++11 -pedantic -Wall -Wextra test.cc testlib.cc
 
 .PHONY: dev
 dev:
-	$(CC) $(CFLAGS) $(SRC_DEV) -o $(EXE_DEV)
+	@$(CC) $(CFLAGS) $(SRC_DEV) -o $(EXE_DEV)
 
 .PHONY: cli
 cli:
-	$(CC) $(CFLAGS) $(SRC_CLI) -o $(EXE_CLI)
+	@$(CC) $(CFLAGS) $(SRC_CLI) -o $(EXE_CLI)
 
