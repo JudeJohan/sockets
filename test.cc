@@ -95,15 +95,19 @@ int main(int narg, char* varg[])
 
   if(isClient == true){
     sprintf(buffer, "This is packet %d\n", 1337);
-    if(sendto(sockfd, buffer, 255, 0, (sockaddr *) &serv_addr, clilen) < 0) error("Could not send datagram");
+    if(sendto(sockfd, buffer, 255, 0, (sockaddr *) &serv_addr, clilen) < 0)
+        error("Could not send datagram");
   }
     else {
     if (recvfrom(sockfd, buffer, 255, 0, (sockaddr *) &cli_addr, &clilen) < 0)
       error("No datagram received");
-    cout << "Received datagram from " << inet_ntoa(cli_addr.sin_addr) << ":" << ntohs(cli_addr.sin_port) << " containing:" << endl << buffer << endl;
+    cout << "Received datagram from " << inet_ntoa(cli_addr.sin_addr) << ":"
+        << ntohs(cli_addr.sin_port) << " containing:" << endl << buffer << endl;
     if (recvfrom(sockfd, buffer, 255, 0, (sockaddr *) &cli_addr, &clilen) < 0)
             error("No datagram received");
-        cout << "Received datagram from " << inet_ntoa(cli_addr.sin_addr) << ":" << ntohs(cli_addr.sin_port) << " containing:" << endl << buffer << endl;
+        cout << "Received datagram from " << inet_ntoa(cli_addr.sin_addr) << ":"
+            << ntohs(cli_addr.sin_port) << " containing:" << endl
+            << buffer << endl;
   }
   //printf("Here is the message: %s\n",buffer);
   //n = write(newsockfd,"I got your message",18);
