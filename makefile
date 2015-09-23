@@ -10,6 +10,13 @@ EXE_TEST=debug.out
 SRC_DEV=debmir.cc
 EXE_DEV=server.out
 
+SRC_CLI=debcli.cc
+EXE_CLI=client.out
+
+
+all:
+	@echo Use make test or make dev or make cli
+
 
 .PHONY: test
 test:
@@ -17,8 +24,11 @@ test:
 
 # g++ -std=c++11 -pedantic -Wall -Wextra test.cc testlib.cc
 
-all:
-	@echo Use make test och make dev
-
+.PHONY: dev
 dev:
 	$(CC) $(CFLAGS) $(SRC_DEV) -o $(EXE_DEV)
+
+.PHONY: cli
+cli:
+	$(CC) $(CFLAGS) $(SRC_CLI) -o $(EXE_CLI)
+
