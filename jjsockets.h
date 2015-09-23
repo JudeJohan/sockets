@@ -19,8 +19,6 @@
 #include <arpa/inet.h>
 #endif
 
-
-
 #define PROTTYPE 0x01
 #define UDP 0x00
 #define TCP 0x01

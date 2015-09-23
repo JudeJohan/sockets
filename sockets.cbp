@@ -39,9 +39,12 @@
 		<Unit filename="jjsockets.cc" />
 		<Unit filename="jjsockets.h" />
 		<Unit filename="makefile" />
+		<Unit filename="test.cc" />
+		<Unit filename="utility.h" />
 		<Extensions>
 			<code_completion />
 			<debugger />
+			<envvars />
 		</Extensions>
 	</Project>
 </CodeBlocks_project_file>
