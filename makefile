@@ -32,3 +32,4 @@ dev:
 cli:
 	@$(CC) $(CFLAGS) $(SRC_CLI) -o $(EXE_CLI)
 
+.PHONY: all test dec cli
